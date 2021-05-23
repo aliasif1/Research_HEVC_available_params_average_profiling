@@ -93,11 +93,19 @@ commands = [
     },
     {
         'id': 10,
-        'cmd': 'ffmpeg -loglevel error -i <input> -c:v libx265 -preset ultrafast -x265-params frame-threads=1:pools="*":lookahead-slices=0:slices=2:crf=28 -vf scale=<target> -c:a copy Output/out.mp4'
+        'cmd': 'ffmpeg -loglevel error -i <input> -c:v libx265 -preset ultrafast -x265-params frame-threads=1:pools="*":slices=2:crf=28 -vf scale=<target> -c:a copy Output/out.mp4'
     },
     {
         'id': 11,
-        'cmd': 'ffmpeg -loglevel error -i <input> -c:v libx265 -preset ultrafast -x265-params frame-threads=0:pools="*":lookahead-slices=0:slices=2:crf=28 -vf scale=<target> -c:a copy Output/out.mp4'
+        'cmd': 'ffmpeg -loglevel error -i <input> -c:v libx265 -preset ultrafast -x265-params frame-threads=0:pools="*":slices=2:crf=28 -vf scale=<target> -c:a copy Output/out.mp4'
+    },
+    {
+        'id': 12,
+        'cmd': 'ffmpeg -loglevel error -i <input> -c:v libx265 -preset ultrafast -x265-params frame-threads=1:pools="*":lookahead-slices=0:slices=2:crf=28 -vf scale=<target> -c:a copy Output/out.mp4'
+    },
+    {
+        'id': 13,
+        'cmd': 'ffmpeg -loglevel error -i <input> -c:v libx265 -preset ultrafast -x265-params frame-threads=0:pools="+,-":crf=28 -vf scale=<target> -c:a copy Output/out.mp4'
     }
 ]
 
