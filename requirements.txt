@@ -1,0 +1,5 @@
+Input/
+Output/
+
+All the videos go in the Input folder 
+All the transcoded videos goes to the Output folder
